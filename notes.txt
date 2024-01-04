@@ -1,0 +1,97 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <div class="flexbox-container">
+      <div class="flexbox-item flexbox-item1"></div>
+      <div class="flexbox-item flexbox-item2"></div>
+      <div class="flexbox-item flexbox-item3"></div>
+      <div class="flexbox-item flexbox-item4"></div>
+      <div class="flexbox-item flexbox-item5"></div>
+      <div class="flexbox-item flexbox-item6"></div>
+      <div class="flexbox-item flexbox-item7"></div>
+      <div class="axis main-axis"></div>
+      <div class="axis cross-axis"></div>
+    </div>
+  </body>
+</html>
+
+
+
+
+CSS
+
+.flexbox-container{
+    background-color: red;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    align-content:center;
+    justify-content:center;
+}
+.flexbox-item{
+    background-color: gray;
+    width: 100px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}
+.flexbox-item1{
+    height: 40px;
+}
+.flexbox-item2{
+    height: 80px;
+}
+.flexbox-item3{
+    height: 120px;
+}
+.flexbox-item4{
+    height: 160px;
+}
+.flexbox-item5{
+    height: 180px;
+}
+.flexbox-item6{
+    height: 200px;
+}
+
+
+justify-content ----> main axis
+align-items ------> cross axis
+
+
+flex items shrink when we reduce the browser size, never goes to the below line(row), but
+when we use flex-wrap:wrap; property, items will come to the next row.
+
+when we have multiple rows, we use align-content:center/flex-start/flex-end/space-between/etc...
+
+
+flex-direction:row; ------> default
+flex-direction:column;   column wise
+
+
+
+flex-items1, flex-items2.....
+
+flex-shrink:0; size of item will shrink when we reduce the browser size
+
+flex-grow:1; size of the item will grow(occupy extra space) of the container
+
+flex-basis:2px; initial size of the item
+
+flex:   ;  shorthand property for grow,shrink and basis
+
+flex-flow: row wrap; shorthand property for flex-directon and flex-wrap
+
+align-self:flex-end/center/etc..... specified for particular item, will override the align-items property
+
+order:1/2/3/etc..... order of items
+
+gap:2px; gap between rows and gap between columns 
